@@ -1,0 +1,168 @@
+#formPayment {
+	display: grid;
+	/* grid-template-columns: auto auto auto auto;
+	grid-template-areas: 'visa master amex' 'banque aPay gPay' 'paypal cash cash'; */
+	grid-template-columns: auto auto auto;
+	grid-template-areas: 'visa visa amex' 'aPay aPay aPay' 'master master gPay' 'banque banque banque';
+	grid-gap: 10px;
+	padding: 10px;
+	grid-row: 10px	
+}
+
+#cashRadio2{
+	visibility: hidden;
+    height: 0;
+    width: 0;
+}
+.payMethod {
+	right: 3px;
+	top: 3px;
+	bottom: 3px;
+	left: 3px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 2px solid transparent;
+	transition: all 0.3s;
+	padding: 30px;
+}
+
+
+.payMethod:hover {
+	cursor: pointer;
+	border-color: #4cd264;
+	outline: none !important;
+}
+
+
+#formPayment input[type="radio"] {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+}
+
+
+.payMethod.visa {
+	grid-area: visa;
+	background-image: url(../images/creditcards.png);
+}
+
+.payMethod.master {
+	grid-area: master;
+	background-image: url(../images/klarna.png);
+	/* background-size: 120px; */
+}
+
+.payMethod.amex {
+	grid-area: amex;
+	background-image: url(../images/amex.png);
+}
+
+.payMethod.banque {
+	grid-area: banque;
+	background-image: url(../images/banc.png);
+}
+
+.payMethod.paypal {
+	grid-area: gPay;
+	background-image: url(../images/paypal.png);
+}
+
+.payMethod.cash {
+	grid-area: cash;
+	background-image: url(../images/cash.png);
+	/* background-size: 170px; */
+}
+
+.payMethod.gPay {
+	grid-area: paypal;
+	/* background-image: url(../images/mobilepay.jpg); */
+}
+
+.payMethod.aPay {
+	grid-area: aPay;
+	background-image: url(../images/mobilepay.jpg);
+}
+
+/********************************************
+			Payment section fin
+**********************************************/
+
+.undermenuarea {
+	background: #f0b70c url(../images/aiportaximenupic.png);
+	height: 90px;
+	/* You must set a specified height */
+	background-position: center;
+	/* Center the image */
+	background-repeat: no-repeat;
+	/* Do not repeat the image */
+	background-size: cover;
+
+}
+#ui-datepicker-div {
+	font-size: 90%;
+}
+
+#map {
+	height: 250px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 13px rgba(0, 0, 0, 0.17);
+	padding: 3px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+.arrow-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70px;
+}
+#pricetag{
+	font-family: Anton;
+    font-size: 38px;
+    margin-bottom: 10px;
+	color:#fbc318;
+}
+.select2-container--default .select2-selection--single{
+	height: 42px;
+	border: 1px solid #ddd;
+}
+.select2-container{
+	width: 100% !important;
+	
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 45px;
+
+	
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+	height: 40px;
+	
+}
+#autocomplete_address_departure{
+	height: 45px;
+}
+#autocomplete_address_arrival{
+	height: 45px;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:9999100;
+}
+
+.my-float{
+	margin-top:16px;
+}
